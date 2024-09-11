@@ -1,13 +1,9 @@
-document.addEventListener("DOMContentLoaded", () => {
-    const images = document.querySelectorAll("img");
-    for(const image of images){
-        fetch("https://dog.ceo/api/breeds/image/random")
-        .then(response => response.json())
-        .then(data => {
-            image.src = data.message
-            image.width = 100;
-            image.height = 100;
-        })
-    }
+document.addEventListener('scroll', function() {
+    const image = document.querySelector('.image-container');
+    const scrollTop = window.scrollY || document.documentElement.scrollTop;
+    const imageHeight = image.clientHeight;
 
-})
+    const scrollPercentage = scrollTop / (imageHeight);
+
+    image.style.opacity = 1 - scrollPercentage;
+});
