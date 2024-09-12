@@ -1,7 +1,8 @@
 
 
 body {
-    background-color: rgb(249, 246, 229);
+    background-color: rgb(247, 246, 238);
+    font-family: "SUSE", sans-serif;
 }
 #nav_bar {
     background-color: transparent;
@@ -26,19 +27,27 @@ body > header {
     align-items: center;
     display: block;
     transition: opacity 0.3s ease-in-out;
+    border: solid;
+    border-color: #fdfffb;
 }
 
 #image-text {
     position: absolute;
-    transform: translate(0%, -170%);
+    transform: translate(0%, -250%);
 }
 
 #image-text > h1 {
-    font-size: 9vw;
+    font-size: 10vw;
+    font-family: "Raleway", sans-serif;
+    font-weight: 100;
+    margin: 1vh;
 }
 
 #image-text > h3 {
     font-size: 3vw;
+    padding: 1vw;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
 }
 
 body > main {
