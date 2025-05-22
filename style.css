@@ -1,0 +1,84 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color:#1d1155;
+}
+
+/* Loading Screen */
+#load_screen {
+    height: 100vh;
+}
+
+#load_screen h1 {
+    color: white;
+    justify-self: center;
+}
+
+/* Navigation */
+header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+#bg {
+    position: absolute;
+    z-index: -2;
+    width: 100vw;
+    height: 100vh;
+}
+
+header nav {
+    width: 0;
+    overflow: hidden;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    height: 100vh;
+}
+
+header ol {
+    list-style: none;
+    padding: 2vw;
+    width: 15vw;
+    justify-content: center;
+}
+
+#hamburger {
+    width: 4vw;
+    align-self: baseline;
+    margin: 1vw;
+}
+
+/* Title */
+#title {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin: auto 2vw;
+}
+
+#title_background_img {
+    z-index: -1;
+    width: 45%;
+    height: fit-content;
+    transform: translateX(8vw);
+    margin: auto;
+}
+
+#title h1 {
+    z-index: 0;
+    width: 45%;
+    font-size: 10vw;
+    transform: translateX(-8vw);
+    font-family: "Dela Gothic One", sans-serif;
+    color: white;
+    mix-blend-mode: soft-light;
+    margin: auto;
+}
