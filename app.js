@@ -9,11 +9,11 @@ async function onSuccess(response) {
         console.log(nav_area.style.overflow);
         if (nav_area.style.overflow == "hidden") {
             nav_area.style.overflow = "visible";
-            nav_area.style.width = '20vw';
+            nav_area.style.width = '25%';
         }
         else {
             nav_area.style.overflow = "hidden";
-            nav_area.style.width = '0';
+            nav_area.style.width = '0%';
             console.log("hidden");
         }
     })
