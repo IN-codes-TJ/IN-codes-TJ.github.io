@@ -1,22 +1,35 @@
 async function onSuccess(response) {
-    const hamb = document.getElementById("hamburger");
-    nav_area = document.querySelector("header nav");
-    nav_area.style.overflow = "hidden";
-    hamb.addEventListener("click", ()=>{
-        nav_area = document.querySelector("header nav");
-        title = document.getElementById("title");
-
-        console.log(nav_area.style.overflow);
-        if (nav_area.style.overflow == "hidden") {
-            nav_area.style.overflow = "visible";
-            nav_area.style.width = '25%';
+    const hamburger = document.getElementById("hamburger");
+    hamburger.addEventListener("click", ()=> {
+        nav_bar = document.querySelector("header nav");
+        nav_bar.classList.toggle("visible_nav");
+        title_text_parent = document.getElementById("title-text");
+        title_text_h1 = title_text_parent.children[0];
+        title_text_h2 = title_text_parent.children[1];
+        
+        if (nav_bar.classList.contains("visible_nav")) {
+            title_text_h1.classList.toggle("smallTitleH1");
+            title_text_h2.classList.toggle("smallTitleH2");
+            title_text_parent.style.lineHeight = "7vw";
         }
         else {
-            nav_area.style.overflow = "hidden";
-            nav_area.style.width = '0%';
-            console.log("hidden");
+            title_text_h1.classList.toggle("smallTitleH1");
+            title_text_h2.classList.toggle("smallTitleH2");
+            title_text_parent.style.lineHeight = "10vw";
         }
     })
+
+    function addBubble() {
+        var bubbleSize = (Math.floor(Math.random() * 22) + 3); //Random number from 3-25 to use as the bubble size percent
+        var bubble = document.createElement("img");
+        bubble.src = "assets/bubble.png";
+        bubble.alt = "A floating bubble";
+        bubble.style.width = bubbleSize + '%';
+        bubble.classList.add("bubbles");
+        document.querySelector("header").appendChild(bubble);
+    }
+
+    addBubble(); //Need to loop through and continuously create and pop bubbles, and make them move around
 }
 
 function onError(error) {
